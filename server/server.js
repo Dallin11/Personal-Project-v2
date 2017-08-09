@@ -110,6 +110,20 @@ app.post('/api/add-event', (req, res, next) => {
             console.log(err)
         })
 });
+app.post('/api/update-grades', (req, res, next) => {
+    // req.app.get('db').getUserIdByName([req.body.name]).then(userId => {
+
+    const {name, grade} = req.body
+    console.log(req.body)
+
+    req.app.get('db').postGrades([name, grade]).then(response => {
+        res.status(200).send(response)
+     })
+     .catch(err => {
+            console.log(err)
+        })
+})
+});
 
 app.get('/api/get-events', (req, res, next) => {
     req.app.get('db').getEvents().then((response) => {
@@ -124,17 +138,6 @@ app.get('/api/get-grades', (req, res, next) => {
 })
 })
 
-app.post('/api/update-grades', (req, res, next) => {
-    req.app.get('db').getUserIdByName([req.body.name]).then(userId => {
-
-    const {name, grade} = req.body
-    console.log(req.body)
-
-    req.app.get('db').postGrades([name, grade]).then(response => {
-        res.status(200).send(response)
-     })
-});
-})
 
 
    app.listen(process.env.PORT || 3000, function() {
