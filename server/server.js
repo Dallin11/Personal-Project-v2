@@ -122,6 +122,7 @@ app.get('/api/get-grades', (req, res, next) => {
     req.app.get('db').getGrades().then((response) => {
         res.send(response)
 })
+})
 
 app.post('/api/update-grades', (req, res, next) => {
     req.app.get('db').getUserIdByName([req.body.name]).then(userId => {
@@ -139,4 +140,3 @@ app.post('/api/update-grades', (req, res, next) => {
    app.listen(process.env.PORT || 3000, function() {
             console.log('listening on port', this.address().port);
     });
-});
