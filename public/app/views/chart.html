@@ -1,0 +1,34 @@
+<div class="full-chartpage"> 
+<section class="chart-section" ng-controller="chartCtrl">
+    <canvas id="line" class="chart-line" chart-data="data"
+    chart-labels="labels" chart-series="series" chart-options="options"
+    chart-dataset-override="datasetOverride" chart-click="onClick">
+    
+    </canvas>
+</section>
+
+<body class="todo-body">
+    <div class="container">
+      <p>
+        <label for="new-task">Add Item</label><input id="new-task" type="text"><button>Add</button>
+      </p>
+      
+      <h3>Todo</h3>
+      <ul id="incomplete-tasks">
+        <li><input type="checkbox"><label>Collect HomeWork</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
+        
+        
+      </ul>
+      
+      <h3>Completed</h3>
+      <ul id="completed-tasks">
+        <li><input type="checkbox" checked><label>Understand fractions</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
+      </ul>
+    </div>
+
+    <script type="text/javascript" src="js/app.js"></script>
+
+  </body>
+</div>
+
+
