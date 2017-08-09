@@ -110,7 +110,7 @@ app.post('/api/add-event', (req, res, next) => {
             console.log(err)
         })
 });
-app.post('/api/update-grades', (req, res, next) => {
+app.post('/api/post-grades', (req, res, next) => {
     // req.app.get('db').getUserIdByName([req.body.name]).then(userId => {
 
     const {name, grade} = req.body
@@ -122,7 +122,7 @@ app.post('/api/update-grades', (req, res, next) => {
      .catch(err => {
             console.log(err)
         })
-})
+});
 // });
 
 app.get('/api/get-events', (req, res, next) => {

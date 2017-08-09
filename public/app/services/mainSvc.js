@@ -23,8 +23,16 @@ angular.module("app").service("mainSvc", function ($http) {
             method: 'POST',
             data: event
         })
-
     }  
+   this.postGrades = (grade) => {
+       return $http({
+           url: '/api/post-grades',
+           method: "POST",
+           data: grade
+           
+       })
+    }
+
     this.getEvents = () => {
         console.log()
         return $http({
@@ -55,14 +63,6 @@ angular.module("app").service("mainSvc", function ($http) {
        })
    }
 
-   this.postGrades = (grades) => {
-       return $http({
-           url: '/api/update-grades',
-           method: "POST",
-           data: grades
-       })
-       
-   }
 
    this.getUser = () => {
        console.log("Service")
