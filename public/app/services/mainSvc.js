@@ -24,11 +24,11 @@ angular.module("app").service("mainSvc", function ($http) {
             data: event
         })
     }  
-   this.postGrades = (grade) => {
+   this.postGrades = (grades) => {
        return $http({
            url: '/api/post-grades',
            method: "POST",
-           data: grade
+           data: grades
            
        })
     }
