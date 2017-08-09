@@ -123,7 +123,7 @@ app.post('/api/update-grades', (req, res, next) => {
             console.log(err)
         })
 })
-});
+// });
 
 app.get('/api/get-events', (req, res, next) => {
     req.app.get('db').getEvents().then((response) => {
