@@ -130,7 +130,7 @@ app.post('/api/update-grades', (req, res, next) => {
     const {name, grade} = req.body
     console.log(req.body)
 
-    req.app.get('db').updateGrades([name, grade]).then(response => {
+    req.app.get('db').postGrades([name, grade]).then(response => {
         res.status(200).send(response)
      })
 });
