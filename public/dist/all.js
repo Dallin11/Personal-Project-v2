@@ -11381,6 +11381,15 @@ angular.module("app").service("mainSvc", function ($http) {
             data: event
         });
     };
+    this.postGrades = function (grades) {
+        return $http({
+            url: '/api/post-grades',
+            method: "POST",
+            data: grades
+
+        });
+    };
+
     this.getEvents = function () {
         console.log();
         return $http({
@@ -11407,14 +11416,6 @@ angular.module("app").service("mainSvc", function ($http) {
             method: 'GET'
         }).then(function (res) {
             return res.data;
-        });
-    };
-
-    this.postGrades = function (grades) {
-        return $http({
-            url: '/api/update-grades',
-            method: "POST",
-            data: grades
         });
     };
 
