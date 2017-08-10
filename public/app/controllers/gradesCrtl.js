@@ -8,7 +8,7 @@ $scope.getGrades = () => {
    console.log(res)
  })
 }
- $scope.post = (grades) => {
+ $scope.postGrades = (grades) => {
    mainSvc.postGrades(grades).then(function(res){
      console.log(res)
      $scope.grades.push(res.data[0])
@@ -19,5 +19,6 @@ $scope.getGrades = () => {
  }
 
   $scope.getGrades()
+  $scope.postGrades()
 
 });
