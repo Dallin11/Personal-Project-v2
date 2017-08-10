@@ -119,9 +119,9 @@ app.post('/api/post-grades', (req, res, next) => {
     req.app.get('db').postGrades([name, grade]).then(response => {
         res.status(200).send(response)
      })
-     .catch(err => {
-            console.log(err)
-        })
+    //  .catch(err => {
+    //         console.log(err)
+    //     })
 });
 // });
 
